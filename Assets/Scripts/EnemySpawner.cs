@@ -17,11 +17,13 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if(timer <= 0)
-        {
-            SpawnEnemy();
-            timer = spawnCooldown;
+        if(player != null){
+            timer -= Time.deltaTime;
+            if(timer <= 0)
+            {
+                SpawnEnemy();
+                timer = spawnCooldown;
+            }
         }
     }
 

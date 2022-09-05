@@ -9,15 +9,21 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [HideInInspector] public Vector2 movement;
     [HideInInspector] public Vector2 lastMovement;
+    public bool isAlive = true;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         lastMovement.x = 1f;
+        isAlive = true;
     }
 
     private void Update()
     {
+        if(hp <= 0){
+            isAlive = false;
+            gameObject.SetActive(false);
+        }
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -41,5 +47,6 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         hp--;
+        Debug.Log(hp);
     }
 }

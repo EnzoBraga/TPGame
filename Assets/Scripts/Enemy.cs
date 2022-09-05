@@ -19,15 +19,20 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
-        _rigidbody.velocity = new Vector2(0,0);
+        if(target != null){
+            if(target.GetComponent<Player>().isAlive){
+                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.deltaTime);
+            }
 
-        if (hp <= 0)
-        {
+            if (!target.GetComponent<Player>().isAlive)
+            {
+                Destroy(gameObject);
+            }
+        }else{
             Destroy(gameObject);
         }
+        _rigidbody.velocity = new Vector2(0,0);
     }
-
     private void OnCollisionStay2D(Collision2D collision) {
         if(collision.gameObject == target && target.GetComponent<Player>().hp > 0){
             target.GetComponent<Player>().TakeDamage();
