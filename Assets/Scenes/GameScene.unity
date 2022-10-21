@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f436b28029747d747810f61907dae29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3942859946589908486, guid: 69250856c43e72844b1b1d4a61735094, type: 3}
+  enemyPrefab: {fileID: 3942859946589908486, guid: d21636a75a6edef8abd7e743d7484996, type: 3}
   player: {fileID: 0}
   spawnArea: {x: 15, y: 10}
   spawnCooldown: 1

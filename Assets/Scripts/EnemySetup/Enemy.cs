@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float moveSpeed;
     [SerializeField] private int enemyDamage = 1;
-    [SerializeField] private int experienceDrop = 400;
+    //[SerializeField] private int experienceDrop = 400;
     private Vector2 movement;
 
 
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
 
         if (hp <= 0)
         {
-            target.GetComponent<Player>().AddExperience(experienceDrop);
+            //target.GetComponent<Player>().AddExperience(experienceDrop);
             Destroy(gameObject);
         }
     }

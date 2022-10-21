@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int maxHp = 1000;
-    public int currentHp = 1000;
+    public int maxHp = 500;
+    public int currentHp = 500;
     [SerializeField] private StatusBar hpBar;
     [HideInInspector] public bool isAlive;
 
@@ -33,8 +33,8 @@ public class Player : MonoBehaviour
         hpBar = GameObject.Find("HPBarBase").GetComponent<StatusBar>();
         lastMovement.x = 1f;
         isAlive = true;
-        experienceBar.UpdateExperienceSlider(experience, toLevelUp);
-        experienceBar.SetLevelText(level, GetUpgrades(4));
+        //experienceBar.UpdateExperienceSlider(experience, toLevelUp);
+        //experienceBar.SetLevelText(level, GetUpgrades(4));
     }
 
     private void Update()
@@ -80,11 +80,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void AddExperience(int amount){
-        experience += amount;
-        CheckLevelUp();
-        experienceBar.UpdateExperienceSlider(experience, toLevelUp);
-    }
+    //public void AddExperience(int amount){
+     //   experience += amount;
+       // CheckLevelUp();
+        //experienceBar.UpdateExperienceSlider(experience, toLevelUp);
+    //}
 
     public void CheckLevelUp(){
         if(experience >= toLevelUp){

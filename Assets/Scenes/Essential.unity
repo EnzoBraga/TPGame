@@ -135,14 +135,13 @@ GameObject:
   - component: {fileID: 72553695}
   - component: {fileID: 72553694}
   - component: {fileID: 72553697}
-  - component: {fileID: 72553696}
   m_Layer: 5
   m_Name: XpBarBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &72553693
 RectTransform:
   m_ObjectHideFlags: 0
@@ -203,25 +202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72553692}
   m_CullTransparentMesh: 1
---- !u!114 &72553696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72553692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6488d0d6b294d1bc9890ac0b65f63814, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 72553697}
-  levelText: {fileID: 1843997826}
-  panel: {fileID: 833547328}
-  upgradeButtons:
-  - {fileID: 916464369}
-  - {fileID: 542234828}
-  - {fileID: 1009953728}
 --- !u!114 &72553697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,7 +926,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -8.000005, y: -7}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1688,7 +1668,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Sem tempo irm\xE3o.\nMelhore XD"
+  m_text: "Sem tempo irm\xE3o."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1813,7 +1793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &833547329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,7 +3379,7 @@ MonoBehaviour:
   currentHp: 1000
   hpBar: {fileID: 135370229}
   isAlive: 1
-  experienceBar: {fileID: 72553696}
+  experienceBar: {fileID: 0}
   experience: 0
   level: 1
   upgrades:
